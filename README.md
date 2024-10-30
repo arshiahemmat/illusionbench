@@ -11,6 +11,7 @@ Example project pages built using this template are:
 - https://vision.huji.ac.il/ssrl_ad/
 - https://vision.huji.ac.il/deepsim/
 
+(Test: validate that Adam has edit permissions.)
 
 
 ## Start using the template
