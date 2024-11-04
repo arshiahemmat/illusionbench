@@ -28,9 +28,9 @@
 
 
   <title>Hiden in Plain Sight</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet"> -->
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -55,7 +55,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Hidden in Plain Sight: Evaluating Abstract Shape Recognition in Vision-Language Models</h1>
+            <h1 class="title is-1 publication-title"><span style="color: #4a90e2; font-weight: 600;">Hidden in Plain Sight</span>: Evaluating Abstract Shape Recognition in Vision-Language Models</h1>
             <h2 class="subtitle is-3 publication-subtitle">NeurIPS 2024 Dataset&Benchmark Track</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
@@ -169,7 +169,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="static/images/generation.png" alt="IllusionBench Overview"/>
-      <h2 class="subtitle has-text-centered">
+      <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">
         <b>Overview of IllusionBench</b> For each of the 3 datasets in <b>IllusionBench</b>, we show an example
         image from the dataset alongside an example <b>scene prompt</b> and an example <b>shape conditioning</b>
         image used to generate it. A shape image x<sub>i</sub> (with the class name c<sub>i</sub>) and a scene description s<sub>j</sub> are
@@ -204,30 +204,30 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/demo.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Can vision-language models recognize these shapes? IllusionBench dataset contains images in which scene elements are arranged to represent abstract shapes.
-        </h2>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/demo.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Can vision-language models recognize these shapes? IllusionBench dataset contains images in which scene elements are arranged to represent abstract shapes.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/zsres.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Zero-Shot Results. Average shape and scene recall of VLMs across each IllusionBench dataset, compared with Stylized-ImageNet (rightmost, shaded).
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/iclres.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            ICL Results. Few-shot (0,1,2 and 4-shot) shape and scene recall of VLMs averaged across the IllusionBench-LOGO, IllusionBench-IN and IllusionBench-ICON datasets, displayed for the different ICL learning tasks and the different prediction tasks.
+          </h2>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/zsres.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Zero-Shot Results. Average shape and scene recall of VLMs across each IllusionBench dataset, compared with Stylized-ImageNet (rightmost, shaded).
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/iclres.png" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        ICL Results. Few-shot (0,1,2 and 4-shot) shape and scene recall of VLMs averaged across the IllusionBench-LOGO, IllusionBench-IN and IllusionBench-ICON datasets, displayed for the different ICL learning tasks and the different prediction tasks.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
 <!-- End image carousel -->
 
@@ -238,7 +238,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 mb-6">Leaderboard</h1>
+          <h1 class="title is-1 mb-6">Zero-Shot Leaderboard</h1>
         </div>
       </div>
       <div class="columns is-centered">
@@ -348,7 +348,124 @@
             </tbody>
           </table>
           <p class="has-text-centered">
-            <small>Results show shape recognition accuracy (%) on different IllusionBench datasets</small>
+            <small>Results show zero-shot shape recognition accuracy (%) on different IllusionBench datasets</small>
+          </p>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 mb-6">In-Context Learning Leaderboard</h1>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>IllusionBench-LOGO</th>
+                <th>IllusionBench-IN</th>
+                <th>IllusionBench-ICON</th>
+                <th>Average</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GPT-4V</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Gemini-Flash</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>LLaVA-1.5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>LLaVA-6-7</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>LLaVA-13b</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>CogVLM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>BLIPv2-t5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>InstructBLIP-7</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>InstructBLIP-13b</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Qwen-VL-Chat</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>MoE-StableLM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>MoE-Qwen</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>MoE-Phi2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="has-text-centered">
+            <small>Results show in-context learning shape recognition accuracy (%) on different IllusionBench datasets</small>
           </p>
         </div>
       </div>
