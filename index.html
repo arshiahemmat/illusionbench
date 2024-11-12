@@ -27,7 +27,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Hiden in Plain Sight</title>
+  <title>IllusionBench | Hidden in Plain Sight: Evaluating Abstract Shape Recognition in Vision-Language Models</title>
   <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -56,7 +56,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title"><span style="color: #4a90e2; font-weight: 600;">Hidden in Plain Sight</span>: Evaluating Abstract Shape Recognition in Vision-Language Models</h1>
-            <h2 class="subtitle is-3 publication-subtitle">NeurIPS 2024 Dataset&Benchmark Track</h2>
+            <h2 class="subtitle is-3 publication-subtitle">NeurIPS 2024 (Datasets & Benchmarks Track)</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -87,7 +87,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/abs/2411.06287" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -121,10 +121,10 @@
                 <span class="link-block">
                     <a href="https://huggingface.co/datasets/arshiahemmat/IllusionBench" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
-<!--                     <span class="icon">
-                      <i class="fab fa-github"></i>
+                    <!-- <span class="icon">
+                      <i class="fa-solid fa-face-grin-beam"></i>
                     </span> -->
-                    <span>HuggingFace Dataset</span>
+                    <span>🤗 HuggingFace Dataset</span>
                   </a>
                 </span>
 
@@ -168,7 +168,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/generation.png" alt="IllusionBench Overview"/>
+      <img src="static/images/generation.png" alt="IllusionBench overview"/>
       <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">
         <b>Overview of IllusionBench.</b> For each of the 3 datasets in <b>IllusionBench</b>, we show an example
         image from the dataset alongside an example <b>scene prompt</b> and an example <b>shape conditioning</b>
@@ -197,30 +197,40 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Image samples -->
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/demo.png" alt="IllusionBench examples"/>
+        <h2 class="subtitle has-text-centered">
+          Can vision-language models (VLMs) recognize these shapes? IllusionBench dataset contains images in which scene elements are arranged to represent abstract shapes.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image samples -->
+
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title has-text-centered">Results</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/demo.png" alt="MY ALT TEXT"/>
+          <img src="static/images/zsres.png" alt="Zero-shot results"/>
           <h2 class="subtitle has-text-centered">
-            Can vision-language models recognize these shapes? IllusionBench dataset contains images in which scene elements are arranged to represent abstract shapes.
+            <b>Zero-Shot Results.</b> Average shape and scene recall of VLMs across each IllusionBench dataset, compared with Stylized-ImageNet (rightmost, shaded).
           </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/zsres.png" alt="MY ALT TEXT"/>
+          <img src="static/images/iclres.png" alt="ICL results"/>
           <h2 class="subtitle has-text-centered">
-            Zero-Shot Results. Average shape and scene recall of VLMs across each IllusionBench dataset, compared with Stylized-ImageNet (rightmost, shaded).
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img src="static/images/iclres.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            ICL Results. Few-shot (0,1,2 and 4-shot) shape and scene recall of VLMs averaged across the IllusionBench-LOGO, IllusionBench-IN and IllusionBench-ICON datasets, displayed for the different ICL learning tasks and the different prediction tasks.
+            <b>ICL Results.</b> Few-shot (0,1,2 and 4-shot) shape and scene recall of VLMs averaged across the IllusionBench-LOGO, IllusionBench-IN and IllusionBench-ICON datasets, displayed for the different ICL learning tasks and the different prediction tasks.
           </h2>
         </div>
       </div>
@@ -231,10 +241,10 @@
 
 
 <!-- Image samples -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <h2 class="title has-text-centered">Image Samples from each dataset in our benchmark</h2>
+      <h2 class="title has-text-centered">Dataset Samples</h2>
       <div class="columns is-centered">
         <div class="column">
           <img src="static/images/4.png" alt="Sample 1"/>
@@ -245,7 +255,32 @@
       </div>
     </div>
   </div>
+</section> -->
+<!-- End image samples -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title has-text-centered">Dataset Samples</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <div class="has-text-centered">
+            <img src="static/images/4.png" alt="Dataset sample 1"/>
+          </div>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <div class="has-text-centered">
+            <img src="static/images/5.png" alt="Dataset sample 2"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+<!-- End image carousel -->
 
 <!-- Benchmark results table -->
 <section class="hero is-small">
@@ -370,7 +405,7 @@
             </tbody>
           </table>
           <p class="has-text-centered">
-            <small>Results show zero-shot shape recognition accuracy (%) on different IllusionBench datasets</small>
+            <small>Results show zero-shot shape recall (%) on different IllusionBench datasets.</small>
           </p>
         </div>
       </div>
@@ -458,11 +493,11 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@inproceedings{hemmat2024hidden,
-        title={Hidden in Plain Sight: Evaluating Abstract Shape Recognition in Vision-Language Models},
-        author={Arshia Hemmat and Adam Davies and Tom A. Lamb and Jianhao Yuan and Philip Torr and Ashkan Khakzar and Francesco Pinto},
-        booktitle={Thirty-eighth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
-        year={2024}
-      }</code></pre>
+  title={Hidden in Plain Sight: Evaluating Abstract Shape Recognition in Vision-Language Models},
+  author={Arshia Hemmat and Adam Davies and Tom A. Lamb and Jianhao Yuan and Philip Torr and Ashkan Khakzar and Francesco Pinto},
+  booktitle={Thirty-eighth Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+  year={2024}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
